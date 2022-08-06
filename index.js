@@ -5,14 +5,25 @@ const port = process.env.PORT;
 
 const app = express();
 
-//Create Connections
+// //Create local Connections
+
+// const db = mysql.createConnection({
+//   host: "localhost",
+//   user: "root",
+//   password: "",
+//   database: "student",
+// });
+
+
+//Create Remote connections
 
 const db = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "",
-  database: "student",
-});
+    host: "remotemysql.com",
+    user: "8gOFYJNrmS",
+    password: "rmKsdDWGF0",
+    database: "8gOFYJNrmS",
+  });
+  
 
 //connect to database
 db.connect((err) => {
